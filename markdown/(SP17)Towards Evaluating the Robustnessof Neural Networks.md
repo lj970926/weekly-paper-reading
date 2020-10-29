@@ -7,6 +7,8 @@ The paper only focused on the computer vision nerual network, but the method it 
 ## Challenge
 To perform the attack, we need to find an adversiral example based on the origin example.
 ## Main Idea
+### Initial formulation
+At first, the author explain the common formulation in finding adversiral examples.
 
 ## Strength
 
