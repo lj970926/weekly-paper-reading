@@ -90,9 +90,9 @@ f(x') = \max(\max \{Z(x')_i: i \neq t\} - Z(x')_t, -k)
 $$
 the constant $k$ is used to depict the confidence of the generated adversarial examples. The bigger the constant is, the stronger that we believe that the examples generated will results in an misclassfication.  
 The result of this experiment shows that for the three methods proposed, a transferability is always feasible on both of the two models. The only differnce is that the distilled model need a larger constant $k$.
-## Strength
+## 4.Strength
 1. The three algorithms proposed in this paper obtain a huge advance compared to the previous method. They successfully prove that the state-of-art defensive strategy still has very big limitions.
 2. The author demostrate many concepts at a high level, giving the reader an intuitive understand on the mechanism on the attack and defense methods and why they success/fail.
-## Weakness
+## 5.Weakness
 1. In this paper, the author constraints his focus only on the computer vision, which is just a part of the deep learning. Other fields such as NLP use models which is very different. What will happen when using this method in these different models is remained for further validation.
 2. The speed of these attacks are typically slower that previous methods, which may constraints their apply in some real-time scenarios.
