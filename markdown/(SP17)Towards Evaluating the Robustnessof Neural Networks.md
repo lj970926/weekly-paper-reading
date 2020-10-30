@@ -1,11 +1,14 @@
-# [(2017 SP) Towards Evaluating the Robustnessof Neural Networks](https://ieeexplore.ieee.org/abstract/document/7958570)
+# [(2017 SP) Towards Evaluating the Robustness of Neural Networks](https://ieeexplore.ieee.org/abstract/document/7958570)
 
 ## 1.Summary
-In this paper, the author demonstrated that the previously proposed methods abount ehancing the robustness neural networks are less effective by introducing three novel attack algorithms that are successful on both secured and unsecured nerworks with a probability of 100%.  
-The paper only focused on the computer vision nerual network, but the method it proposed may be suitable for different AI problem too.  
+In this paper, the author proposed three different attack methods to generate adversarial examples towards nerual network models under different distance metric. These methods defeat the state of art defense strategy which are thought to be robust previously.  
+The author also proved that a high-confidence adversarial for one model can apply to another model too. Even in the situation that the latter is defensed using the state-of-art method.  
+The author suggest that the methods in this paper show be a benchmark in future defense attempts.
+
 
 ## 2.Challenge
-To perform the attack, we need to find an adversarial example based on the origin example.
+The main challenge in finding adversarial examples is the examples generated should be distinguished with the origin example as little as possible.  
+Furthermore, there are already some defensive method that let all of the previous attack algorithm invalid. So new attack methods should be proved to work effectively even with these defensive method.
 ## 3.Main Idea
 ### 3.1.Targeted attack
 Let $C(x)$ be the correct label of an input example x. Given an valid example $x$ we can find a similar sample $x'$ with a target $t$ and $t \neq C(x)$. What an attacker should do is  find an valid example that is as close as possible to the origin input under some distance metric. This can be demonstrated as the formulation below.
@@ -78,7 +81,18 @@ The author evaluate the three attack algorithms on both original models and mode
 The results have shown that:
 1. On unsecured models, all of the three attacks get a success rate of 100% and the mean distance is fewer when comparing to previous method.
 2. On models protected by defensive distillation, all previous proposed methods fail to find a adversarial example. However the success rate of algorithms in this paper generate adversarial examples without any defeat.
-###
+### 3.8.Transferability
+Transferability refers to the phenomenon that an adversarial example for a model will often be an adversarial example for a different model, even the two models are different and trained with different datasets.  
+So defense methods must prove they can cut off this tranferability. The author trains a standard model, and use the adversarial examples for the standard model to attack other two models. One of them is another standard model and the other is a model protected by defensive distillation.  
+The author also modify the loss function $f$:
+$$
+f(x') = \max(\max \{Z(x')_i: i \neq t\} - Z(x')_t, -k)
+$$
+the constant $k$ is used to depict the confidence of the generated adversarial examples. The bigger the constant is, the stronger that we believe that the examples generated will results in an misclassfication.  
+The result of this experiment shows that for the three methods proposed, a transferability is always feasible on both of the two models. The only differnce is that the distilled model need a larger constant $k$.
 ## Strength
-
+1. The three algorithms proposed in this paper obtain a huge advance compared to the previous method. They successfully prove that the state-of-art defensive strategy still has very big limitions.
+2. The author demostrate many concepts at a high level, giving the reader an intuitive understand on the mechanism on the attack and defense methods and why they success/fail.
 ## Weakness
+1. In this paper, the author constraints his focus only on the computer vision, which is just a part of the deep learning. Other fields such as NLP use models which is very different. What will happen when using this method in these different models is remained for further validation.
+2. The speed of these attacks are typically slower that previous methods, which may constraints their apply in some real-time scenarios.
