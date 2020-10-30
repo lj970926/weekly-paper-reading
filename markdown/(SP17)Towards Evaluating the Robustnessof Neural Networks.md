@@ -57,7 +57,28 @@ The follow image shows the result of the $L_2$ attack for each source/target pai
 ![L2 attack result](../images/l2_result.png)
 ### 3.5.$L_0$ attack
 Unlike the $L_2$ attack, the $L_0$ norm is not differentiable and therefore is ill-suited for gradient descent.  
-The resolution adopted is to maintain a set of fixed pixels. The set is initially empty. At each step, using $L_2$ attack 
+The resolution adopted is to maintain a set of fixed pixels. The set is initially empty. At each step, perform $L_2$ attack on restricted pixels that are not in the fixed set and then compute the gradient of $f$ with respect to $\delta$. Let's denote it as $g$. Then, try to select a pixel with a minimum $g_i \cdot \delta_i$ and add it into the fixed set. This means to eliminate the pixel that contribute least to the attack. After a few steps, we can finally find a minimum subset of pixels required to generate an adversarial example.  
+With a warm-start method, the $L_0$ attack can be perform as fast as the $L_2$ attack. The following image show the result of $L_0$ result for each of source/target pair.
+![l0 attack result](../images/l0_result.png)
+### 3.6.$L_\infty$ attack
+As the $L_0$ attack above, the $L_2$ attack's objective function is indifferentiable too. Using a gradient descent directly may not get a good effect because $\delta$ will oscillate between two different points. The reason for this phenomenon is the $L_\infty$ metric only penalizes the largets $\delta_i$, leaving other $\delta_j$ unmodified even though they are big too.  
+To solve this problem, the author first modify the objective function
+$$
+\min c \cdot f(x + \delta) + \sum_{i} [(\delta_i - \tau)^+]
+$$
+
+Using this function, we can penalize all pixels whose intensity are larger than a threshold.
+The value of $\tau$ is set to 1 initially. Everytime when all $\delta_i$ is less than $\tau$, it is reduced by a factor of 0.9.
+The attack result is shown below
+![l inf result](../images/l_inf_result.png)
+### 3.7.Attack evaluation
+The author evaluate the three attack algorithms on both original models and models protected with distillation. The datasets used in evaluation are MNIST, CIFAR and ImageNet.
+![eval res unsecured](../images/eval_res_unsecured.png)
+![eval res secured](../images/eval_res_secured.png)
+The results have shown that:
+1. On unsecured models, all of the three attacks get a success rate of 100% and the mean distance is fewer when comparing to previous method.
+2. On models protected by defensive distillation, all previous proposed methods fail to find a adversarial example. However the success rate of algorithms in this paper generate adversarial examples without any defeat.
+###
 ## Strength
 
 ## Weakness
