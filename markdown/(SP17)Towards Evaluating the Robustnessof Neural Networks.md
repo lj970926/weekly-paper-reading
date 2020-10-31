@@ -1,17 +1,17 @@
 # [(2017 SP) Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/pdf/1608.04644.pdf?source=post_page---------------------------0)
 
 ## 1.Summary
-In this paper, the author proposed three different attack methods to generate adversarial examples towards nerual network models under different distance metric. These methods defeat the state of art defense strategy which are thought to be robust previously.  
-The author also proved that a high-confidence adversarial for one model can apply to another model too. Even in the situation that the latter is defensed using the state-of-art method.  
+In this paper, the author proposed three different attack methods to generate adversarial examples towards nerual network models under different distance metrics. These methods defeat the state-of-art defense strategies which are thought to be robust previously.  
+The author also proved that a high-confidence adversarial example for one model can apply to another model too. Even in the situation that the latter is defensed using the state-of-art method.  
 The author suggest that the methods in this paper show be a benchmark in future defense attempts.
 
 
 ## 2.Challenge
-The main challenge in finding adversarial examples is the examples generated should be distinguished with the origin example as little as possible.  
-Furthermore, there are already some defensive method that let all of the previous attack algorithm invalid. So new attack methods should be proved to work effectively even with these defensive method.
+The main challenge in finding adversarial examples is that the example generated should be distinguished with the origin example as little as possible.  
+Furthermore, there are already some defensive methods that let all of the previous attack algorithms invalid. So new attack methods should be proved to work effectively even with these defensive methods.
 ## 3.Main Idea
 ### 3.1.Targeted attack
-Let $C(x)$ be the correct label of an input example x. Given an valid example $x$ we can find a similar sample $x'$ with a target $t$ and $t \neq C(x)$. What an attacker should do is  find an valid example that is as close as possible to the origin input under some distance metric. This can be demonstrated as the formulation below.
+Let $C(x)$ be the correct label of an input example x. Given an valid example $x$ we can find a similar sample $x'$ with a target $t$ and $t \neq C(x)$. What an attacker should do is to find an valid example that is as close as possible to the origin input under some distance metrics. This can be demonstrated as the formulation below.
 $$
 min\quad D(x, x + \delta)
 $$
@@ -21,7 +21,7 @@ $$
 $$ 
 x + \delta \in [0, 1] 
 $$
-$D$ is the distance metric. The main distance metric used in finding adversarial examples is $L_0$, $L_2$ and $L_\infty$ norm.
+$D$ is the distance metric. The main distance metrics used in finding adversarial examples are $L_0$, $L_2$ and $L_\infty$ norm.
 * $L_0$ distance: the number of indexes $i$ such that $x'_i \neq x_i'.$
 * $L_2$ distance: the standard Euclidean distance between $x$ and $x'$.
 * $L_\infty$ distance: the maximum change among all indexes:
@@ -29,7 +29,7 @@ $$
 L_\infty = max(\lvert x_1 - x_1'\rvert,\cdots, \lvert x_n - x_n' \rvert) 
 $$
 ### 3.2.Objective function
-Because the opjective function is hard to train, the author covert the function to a different but equivalent form:
+Because the opjective function is hard to train, the author convert the function to a different but equivalent form:
 $$ 
 min\quad D(x, x + \delta) + c \cdot f(x + \delta) 
 $$
@@ -49,13 +49,13 @@ To train the model with unmodified gradient descent, the author choose to change
 $$ 
 \delta = \frac{1}{2}(tanh(w) + 1) - x 
 $$
-Because tanh varies form -1 to 1, $x + \delta$ is promised to be within the valid range. Then the standard gradient descent can be used to find the adversarial example.
+Because tanh varies form -1 to 1, $x + \delta$ is promised to be within the valid range. Then the standard gradient descent can be used to find the adversarial examples.
 ### 3.4.$L_2$ attack
 Putting these ideas together, the $L_2$ attack can be expressed as:
 $$ 
 min\quad \lVert\frac{1}{2}(tanh(w) + 1) - x\rVert_2^2 + c \cdot f(\frac{1}{2}(tanh(w) + 1)) 
 $$
-Applying gradient descent to this objective ofthen results in a local minimum. To solve this problem, the author randomly choose a set of starting points which are close to the origin image.  
+Applying gradient descent to this objective often results in a local minimum. To solve this problem, the author randomly choose a set of starting points which are close to the origin image.  
 The follow image shows the result of the $L_2$ attack for each source/target pair. We can see that almost all attacks are visually indistinguishable from the origin digit.
 ![L2 attack result](../images/l2_result.png)
 ### 3.5.$L_0$ attack
@@ -70,7 +70,7 @@ $$
 \min c \cdot f(x + \delta) + \sum_{i} [(\delta_i - \tau)^+]
 $$
 
-Using this function, we can penalize all pixels whose intensity are larger than a threshold.
+Using this function, we can penalize all pixels whose intensity is larger than a threshold.
 The value of $\tau$ is set to 1 initially. Everytime when all $\delta_i$ is less than $\tau$, it is reduced by a factor of 0.9.
 The attack result is shown below
 ![l inf result](../images/l_inf_result.png)
@@ -94,27 +94,27 @@ The result of this experiment shows that for the three methods proposed, a trans
 1. The three algorithms proposed in this paper obtain a huge advance compared to the previous method. They successfully prove that the state-of-art defensive strategy still has very big limitions.
 2. The author demostrate many concepts at a high level, giving the reader an intuitive understand on the mechanism on the attack and defense methods and why they success/fail.
 ## 5.Weakness
-1. In this paper, the author constraints his focus only on the computer vision, which is just a part of the deep learning. Other fields such as NLP use models which is very different. What will happen when using this method in these different models is remained for further validation.
-2. The speed of these attacks are typically slower that previous methods, which may constraints their apply in some real-time scenarios.
+1. In this paper, the author constraints his focus only on the computer vision, which is just a part of the deep learning. Other fields such as NLP use models which are very different. What will happen when using this method in these different models is remained for further validation.
+2. The speed of these attacks is typically slower that previous methods, which may constraints their application in some real-time scenarios.
 # [(2018 VTC-Fall)Detecting and Mitigating Spoofing Attack against an Automotive Radar](https://www.cs.binghamton.edu/~kang/vtc18-prateek.pdf)
 ## 1.Solved problem
 * Show the vulnerabilities of PyCRA in the context of automotive radar systems. The method will turn off the rader periodically which can descrease the availability of rader system on autonomous vehicles.
 * Propose STCR, a new defense method that uses the spatio-temporal challenge-response scheme.
 * Using Matlab to evaluate and compare the accuracy and robustness of PyCRA and STCR.
 ## 2.Main idea
-The PyCRA uses a method that periodically trun of the radar. The assume behind it is that the attacker can't discover this behavior and will continously emit sproofing signal. As a result, if the receiver detect the signal received is higher than a threahold between the turn-off period, this signal is deemed as the attack signal.  
-Hower, this method may cause some potential disks in the autonomous driving scenario beacuse the vehicle should detect the obstacle in real time.  
-The modification the author made is to use a spatio-temporal scheme that transmit radar signal toward randomly selected directions. If the signal received is from a different, it's considered to be the attack signal.
+The PyCRA uses a method that periodically trun of the radar. The assume behind it is that the attacker can't discover this behavior and will continously emit sproofing signals. As a result, if the receiver detect the signal received is higher than a threahold between the turn-off period, this signal is deemed as the attack signal.  
+Hower, this method may cause some potential disks in the autonomous driving scenario beacuse the vehicle should detect the obstacles in real time.  
+The modification the author made is to use a spatio-temporal scheme that transmit radar signal toward randomly selected directions. If the signal received is from a different direction, it's considered to be the attack signal.
 ## 3.Highlights worth learning
 * The insight to find potential problems in state-of-art attack methods
 * use change in space to substitude the change in time domain.
 # [(2018 CVPR)Robust Physical-World Attacks on Deep Learning Visual Classification](http://openaccess.thecvf.com/content_cvpr_2018/papers/Eykholt_Robust_Physical-World_Attacks_CVPR_2018_paper.pdf)
 ## 1.Solved problem
-* The author introduce Robust Physical Perturbation($RP_2$) to generate physical perturbations for physical-world objects to cause the misclassification of nerual network models.
+* The author introduced Robust Physical Perturbation($RP_2$) to generate physical perturbations for physical-world objects to cause the misclassification of nerual network models.
 * The author proposed a evaluation methodology to study the effectiveness of physical perturbations in both lab and field scenarios.
 ## 2.Main Idea
-The are two major categorys of pertubation attack methods. One is digital adversarial attack which is performed by change the intensities of pixels, the other is physical adversarial attack which try to change the real world object.  
+The are two major categorys of pertubation attack methods. One is digital adversarial attack which is performed by change the intensities of pixels, the other is physical adversarial attack which tries to change the real world objects.  
 The digit-only methods don't work well in real-world scenarios because the complex environment conditions. So in this paper the author proposed to perform an attack by add stickers to a real object. The author choose to add black stickers the stop signs alongside the road.  
-To achieve this goal, the author first generating adversiral examples with a procedure similar to the digit-only-attack but with some consideration on some physical world challenges. Then, a mask is appliied to gurantee that all of the spoofed points are located inside the target sign. The author evalute their method in both lab and field scenario with differnt angles and distances to the stop sign and all of these tests show a excellent performance.
+To achieve this goal, the author first generating adversiral examples with a procedure similar to the digit-only attack but with some consideration on some physical world challenges. Then, a mask is appliied to gurantee that all of the spoofed points are located inside the target sign. The author evalute their method in both lab and field scenarios with differnt angles and distances to the stop sign and all of these tests show a excellent performance.
 ## 3.Highlights worth learning
-* the use of the mask which makes it possible to constraint the generated sproofed points inside the object makes it possible to perturb the real object indeed.
+* The mask used to constraint the generated sproofed points inside the object makes it possible to perturb the real object indeed.
