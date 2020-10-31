@@ -1,4 +1,4 @@
-# [(2017 SP) Towards Evaluating the Robustness of Neural Networks](https://ieeexplore.ieee.org/abstract/document/7958570)
+# [(2017 SP) Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/pdf/1608.04644.pdf?source=post_page---------------------------0)
 
 ## 1.Summary
 In this paper, the author proposed three different attack methods to generate adversarial examples towards nerual network models under different distance metric. These methods defeat the state of art defense strategy which are thought to be robust previously.  
@@ -96,7 +96,7 @@ The result of this experiment shows that for the three methods proposed, a trans
 ## 5.Weakness
 1. In this paper, the author constraints his focus only on the computer vision, which is just a part of the deep learning. Other fields such as NLP use models which is very different. What will happen when using this method in these different models is remained for further validation.
 2. The speed of these attacks are typically slower that previous methods, which may constraints their apply in some real-time scenarios.
-# (2018 VTC-Fall)Detecting and Mitigating Spoofing Attack against an Automotive Radar
+# [(2018 VTC-Fall)Detecting and Mitigating Spoofing Attack against an Automotive Radar](https://www.cs.binghamton.edu/~kang/vtc18-prateek.pdf)
 ## 1.Solved problem
 * Show the vulnerabilities of PyCRA in the context of automotive radar systems. The method will turn off the rader periodically which can descrease the availability of rader system on autonomous vehicles.
 * Propose STCR, a new defense method that uses the spatio-temporal challenge-response scheme.
@@ -108,3 +108,13 @@ The modification the author made is to use a spatio-temporal scheme that transmi
 ## 3.Highlights worth learning
 * The insight to find potential problems in state-of-art attack methods
 * use change in space to substitude the change in time domain.
+# [(2018 CVPR)Robust Physical-World Attacks on Deep Learning Visual Classification](http://openaccess.thecvf.com/content_cvpr_2018/papers/Eykholt_Robust_Physical-World_Attacks_CVPR_2018_paper.pdf)
+## 1.Solved problem
+* The author introduce Robust Physical Perturbation($RP_2$) to generate physical perturbations for physical-world objects to cause the misclassification of nerual network models.
+* The author proposed a evaluation methodology to study the effectiveness of physical perturbations in both lab and field scenarios.
+## 2.Main Idea
+The are two major categorys of pertubation attack methods. One is digital adversarial attack which is performed by change the intensities of pixels, the other is physical adversarial attack which try to change the real world object.  
+The digit-only methods don't work well in real-world scenarios because the complex environment conditions. So in this paper the author proposed to perform an attack by add stickers to a real object. The author choose to add black stickers the stop signs alongside the road.  
+To achieve this goal, the author first generating adversiral examples with a procedure similar to the digit-only-attack but with some consideration on some physical world challenges. Then, a mask is appliied to gurantee that all of the spoofed points are located inside the target sign. The author evalute their method in both lab and field scenario with differnt angles and distances to the stop sign and all of these tests show a excellent performance.
+## 3.Highlights worth learning
+* the use of the mask which makes it possible to constraint the generated sproofed points inside the object makes it possible to perturb the real object indeed.
