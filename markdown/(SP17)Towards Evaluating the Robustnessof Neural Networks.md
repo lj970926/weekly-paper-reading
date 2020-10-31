@@ -96,3 +96,15 @@ The result of this experiment shows that for the three methods proposed, a trans
 ## 5.Weakness
 1. In this paper, the author constraints his focus only on the computer vision, which is just a part of the deep learning. Other fields such as NLP use models which is very different. What will happen when using this method in these different models is remained for further validation.
 2. The speed of these attacks are typically slower that previous methods, which may constraints their apply in some real-time scenarios.
+# (2018 VTC-Fall)Detecting and Mitigating Spoofing Attack against an Automotive Radar
+## 1.Solved problem
+* Show the vulnerabilities of PyCRA in the context of automotive radar systems. The method will turn off the rader periodically which can descrease the availability of rader system on autonomous vehicles.
+* Propose STCR, a new defense method that uses the spatio-temporal challenge-response scheme.
+* Using Matlab to evaluate and compare the accuracy and robustness of PyCRA and STCR.
+## 2.Main idea
+The PyCRA uses a method that periodically trun of the radar. The assume behind it is that the attacker can't discover this behavior and will continously emit sproofing signal. As a result, if the receiver detect the signal received is higher than a threahold between the turn-off period, this signal is deemed as the attack signal.  
+Hower, this method may cause some potential disks in the autonomous driving scenario beacuse the vehicle should detect the obstacle in real time.  
+The modification the author made is to use a spatio-temporal scheme that transmit radar signal toward randomly selected directions. If the signal received is from a different, it's considered to be the attack signal.
+## 3.Highlights worth learning
+* The insight to find potential problems in state-of-art attack methods
+* use change in space to substitude the change in time domain.
