@@ -21,5 +21,22 @@ The author indentified four potential factors which contribute to this phenomeno
 * LiDAR measurement uncertainty($R_1^{lidar}$)
 * Difference between LiDAR position and the original MSF output without attack($\Delta_{lidar}$)
 * IMU measurement($imu_1$)  
+The author also plot the deviation in those windows that meet the limitation in both attacks  .
+![take over](../images/wk2_take_over.png)  
+A take over is found in which the deviation is increased in a exponential pattern compared two common pattern.
 ### 3.3  FusionRipper
+The analysis above tell us that the take over effect happen when the algorithm has a large uncertainty on the LiDAR and IMU measurement. In this situation, the result from the sproofed GPS input may have bigger weight in one window. Base on this obsevation the author proposed a two-phase two achieve the atttack goal.
+1. Vulnerability profiling. The attacker continues emit sproofed signal with a constant deviation. When the offset of the vehicle is larger than a threshold, then it's thought the sensor is in a vulnerable state.
+2. Aggressive spoofing. After indentify the vulnerable state, the main attack process is performed. In ths stage, a exponential deviation is used to generate sproofed GPS input.
+### 3.4 Offline attack parameter profiling
+The results of the experiments prove that there always exists a conbination of attack parameters that can achieve high success rates. However, these experiments also show that the selection of parameters has a significant impact on the attack result. To achieve effective attack, a parameter profiling method should be proposed to integrate the process.  
+In this paper, the author proposed a exhaustive method. For each combination, the attack performs several attack attempt. If the successful rate is higher than a threshold, the algorithm stops and reports current combination as profiling result. If there is non combination meets the requirement, the algorithm will return the combination with the highest success rates.
+
+## Strength
+* Propose a novel attack GPS sproofing method that defeats sensor fusion.
+* Prove the method can work relatively well in common scenarios.
+## Weakness
+* The paper doesn't perform real-world attack. All the works are down by simulation.
+* The offline method is quite primitive.
+* The method is only evaluated in one particular production-level MSF implement.
 
