@@ -40,3 +40,17 @@ In this paper, the author proposed a exhaustive method. For each combination, th
 * The offline method is quite primitive.
 * The method is only evaluated in one particular production-level MSF implement.
 
+# A Security Credential Management System for V2V Communications 
+## 1 Sovled problem
+In this paper, the author proposed a novel secure credential management system for vehicle-to-vehicle communication. The design of this system tries to get a balance between enough security and reasonable cost and flexibility.
+## 2 Main idea
+The system's overall architecture can be seen follow:  
+![sys arch](../images/wk2_v2v_arc.png)
+The disign goal for this system is to prevent the following attack:
+* Attacks on end-users' privacy from SCMS outsiders.
+* Attacks on end-users' privacy from SCMS insiders.
+* Authenticated messages leading to false warnings.
+A novel pseudonym certificate provisioning model and a butterfly cryptographic algorithm is used to achieve these goals.  
+## 3 Highlights worth learning
+* The design philosophy that no single component knows imformation enough to track a device.
+* The butterfly ket expansion used to encrypt the certificate.
