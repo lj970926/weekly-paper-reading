@@ -23,3 +23,11 @@ As with many popular GNSS based localization methods, the author used RTK(Real T
 In the fusion framework, an error-state Kalman filter is applied to fuse the localization measurements by LiDAR and GNSS with IMU. The SINS Kinematic Inertial Navagation System is used to generate the position, velocity, and attitude within the IMU.   
 Because the SINS error grows over time, the author used an error-state Kalman filter to estimate the error of SINS and correct it.  
 To achieve a high success rate, the measurement delay and disorder must be taken into consideration. The sensor fusion framework maintains two independent filters and used the difference between the tow filters to determine whether there is a disorder or not.  
+
+## 4 Strength
+
+1. Use not only the intensity of the LiDAR signals but also the altitude of them.
+2. The multi-sensor fusion framework utilize all of the three sensors advantages ultimately.
+3. The first algorithm  that can get centimeter-grade in complex urban environment.
+## 5 weakness
+1. Need more experiment to prove it can works well with some extreme weather.
