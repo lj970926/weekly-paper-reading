@@ -14,4 +14,9 @@ the picuture below show the two different scenarios.
 
 ![two scene](../images/wk5_twoscene.png)
 
-The author made an assumption which is the central idea in this paper: the two categories of points cloud can achieve the same results without factors that cause the decrement of points.
+The author made an assumption which is the central idea in this paper: the two categories of points cloud can achieve the same results without factors that cause the decrement of points. So, attackers can also achieve their goals by imitating these pattern.
+
+### 3.2 Black-box Sproofing Attack
+Based on the idea above, the author proposed a black-box sproofing attack algorithm that works well for all state-of-art perception model.  
+First, the author used real-world physical traces of occluded or distant vehicles to perform the attack. Specifically, the author pick points clouds that conform the pattern above and do spatial transformation to make target points closer to the vehicle. With the assumption proposed above, the removed points clouds can also fool the perception model.  
+To make the attack more flexible,  the author also proposed a method which generates sproofed points from scratch. That is, 
