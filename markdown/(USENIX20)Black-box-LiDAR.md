@@ -49,4 +49,10 @@ After generating the spoofing object, the author used 3D printing technology to 
 State-of-art 3D object detection algorithms based on bird-eye view and voxel view are likely to loss information contained in the raw points cloud. However,  applying CNN directly on the 3D points cloud has been proved computational expensive.  
 In this paper, the author proposed a novel two-stage neural network to try to get both high quality and efficiency.  
 ## 2 Main Idea
+In this paper, the author presented a two-stage 3D object detection framework which hybrids the voxel and raw point cloud. 
 
+![fast point](../images/wk5_fast_arch.png)
+
+The method first take the voxel represent of raw point cloud to a VoxelRPN network to get a set of initial prediction in high speed. In the second stage, the initial prediction is fused with the feature extracted and taken as input to RefinerNet to get the final results with better accuracy.
+## 3 Highlights Worth Learning
+1. the idea to fuse voxel representation with the raw point cloud to make use of uncompressed information.
