@@ -43,3 +43,10 @@ After generating the spoofing object, the author used 3D printing technology to 
 1. perform the real-world experiments
 2. the idea to generating spoofed points using 3D modeling
 3. the evaluation black box algorithm.
+
+# (2019 ICCV) Fast point r-cnn
+## 1 Solved Problem
+State-of-art 3D object detection algorithms based on bird-eye view and voxel view are likely to loss information contained in the raw points cloud. However,  applying CNN directly on the 3D points cloud has been proved computational expensive.  
+In this paper, the author proposed a novel two-stage neural network to try to get both high quality and efficiency.  
+## 2 Main Idea
+
