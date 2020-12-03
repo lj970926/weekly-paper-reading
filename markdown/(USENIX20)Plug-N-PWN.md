@@ -20,9 +20,15 @@ The attack surface reside in the three phase of the three phases:
 2. Connection Stage, with some possible verification steps.
 3. Communicating Stage.
 
-### 3.2 Vulnerability Analyze
+### 3.2 Vulnerability Analysis
 
 The main goal of the analyze is trying our best to find vulnerabilities reside in the three phases. The author proposed a detection framework, DONGLE-SCOPE to perform the analyze. The workflow of the DONGLE-SCOPE is shown below.
 
 ![dongle scope workflow](../images/wk6_dongle_scope.png)
 
+This framework test the OBD-II dongle on a vehicle and conduct static program analyze simultaneously. According to three phases, the framework can be divided into four main components. For each component in the dynamic analyze, a corresponding measurement is proposed to judge the existence of vulnerabilities.  
+During the broadcasting stage, it collects the broadcast information. In the connection stage it examine not only the feasibility to build a connection but also the possibility to build multi connections while the user is using the dongle. In the communication stage, it tests whether predefined and undefined messages can pass the filter of the dongle and cause the desirable effect.
+
+### 3.3 Experiment
+
+The author collected 77 most popular OBD-II dongles on Amazon to conduct the experiment.
