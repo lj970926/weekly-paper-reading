@@ -31,4 +31,15 @@ During the broadcasting stage, it collects the broadcast information. In the con
 
 ### 3.3 Experiment
 
-The author collected 77 most popular OBD-II dongles on Amazon to conduct the experiment.
+The author collected 77 most popular OBD-II dongles on Amazon and 21 companion apps on Google Play to conduct the experiment. The author exerted DONGLE-SCOPE on these dongles and apps to find if they have the five identified vulnerabilities:
+
+* Connection layer authentication.
+* Application layer authentication.
+* Multi access capability.
+* Filter out undefined messages.
+* Over-the-air firmware subverting and extraction.
+
+With the experiments, the author found that all of these dongles have at least two types of vulnerabilities.
+
+### 3.4 Case Study
+
