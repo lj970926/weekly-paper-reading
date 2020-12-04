@@ -62,4 +62,7 @@ These attacks can cause very severe consequence, such as leakage of information 
 In this paper, the author proposed a new method to perform reverse engineering on CAN bus messages. Compared to previous methods, the new method doesn't need a real car and human intervene, which lead to low cost and high efficiency.
 
 ## 2 Main Idea
+Recent years, with the evolution of Iot and its application in automobiles, a lot of mobile apps have be generated to provide various functions about the car, such as remote diagnosis and operation. However, such apps have to use CAN messages to communicate with the vehicles too, either by itself or its companion dongles. This provides us a new way to revert engineering the CAN messages by analyzing the logic that they generate a message.
+
+## 3 Highlights Worth Learning
 
