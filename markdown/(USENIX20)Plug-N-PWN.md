@@ -42,4 +42,24 @@ The author collected 77 most popular OBD-II dongles on Amazon and 21 companion a
 With the experiments, the author found that all of these dongles have at least two types of vulnerabilities.
 
 ### 3.4 Case Study
+To reveal the severity of these vulnerabilities, the author designed four concrete types of attacks which exploit one or more vulnerabilities each, as shown in the table below:
+
+![case study](../images/wk6_case_study.png)
+
+These attacks can cause very severe consequence, such as leakage of information or even some safety-critical hazard. A lot of dongles on the shelf can be used as attack surfaces to perform the attack.
+
+## 4 Strength
+1. Conduct extensive experiments on Wireless OBD-II dongles and apps.
+2. Combine dynamic analysis and static analysis to find vulnerabilities.
+
+## 5 Weakness
+1. The analysis need a real car, which is expensive to find.
+2. Without enough summary on some total pattern behind these devices
+
+# (2020 NDSS)Automated Cross-Platform Reverse Engineering of CAN Bus Commands From Mobile Apps
+
+## 1 Solved Problem
+In this paper, the author proposed a new method to perform reverse engineering on CAN bus messages. Compared to previous methods, the new method doesn't need a real car and human intervene, which lead to low cost and high efficiency.
+
+## 2 Main Idea
 
