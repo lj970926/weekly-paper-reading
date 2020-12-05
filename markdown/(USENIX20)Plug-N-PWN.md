@@ -74,5 +74,15 @@ Recent years, with the evolution of Iot and its application in automobiles, a lo
 Current researches on perception of automobiles mostly concentrate on the vehicle side, such as more powerful sensors and more effective algorithms. However, some dynamic conditions on the road may be difficult for on-vehicle sensors to detect. So there is a requirement to deploy infrastructures along the road. However, most of the road side infrastructures are very expensive to deploy. In this paper, the author proposed a novel method that use the traffic signs to convey dynamic information about the road but keep their origin functions.
 
 ## 2 Main Idea
+In this paper, the author propose RetroI2V, which exploits the visible light backscattering communication schemes(VLBC) to carry information between vehicle and road sign.
 
+![system design](../images/wk6_retro_arch.png)
+
+The picture above show the high-level design of RetroI2V. The architecture of RetroI2V consists of two main layers, the PHY layer and MAC layer. The PHY is designed to deal with emit and sense of the light. The MAC layer is designed to avoid collision cases.  
+To apply the VLBC in the road scenarios, the author renovated the structure of the LCD used to generate information signals and excitatory carrier sensing(ECS) to avoid in-band interference.  
+
+## 3 Highlights Worth Learning
+
+1. The idea to use light to carry information between vehicle and the road side.
+2. The method proposed to deal with multi-access, long distance and flicker.
 
