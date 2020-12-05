@@ -1,4 +1,4 @@
-# (2020 USENIX)Plug-N-Pwned: Comprehensive Vulnerability Analysis of OBD-II Dongles as A New Over-the-Air Attack Surface in Automotive IoT
+# [(2020 USENIX)Plug-N-Pwned: Comprehensive Vulnerability Analysis of OBD-II Dongles as A New Over-the-Air Attack Surface in Automotive IoT](http://web.cse.ohio-state.edu/~lin.3021/file/SEC20a.pdf)
 
 ## 1 Summary
 A large number of OBD-II dongles have been deployed in  various automobiles, which provide the driver of the car capacities to monitor and operate the car remotely combined with the mobile apps. However, these widely used dongles and apps have quilt a lot vulnerabilities which can be exploited by the attacker to cause severe consequence, such as privacy leakage, emergency brake, etc. In this paper, the author devise an analyze tool to detect some common vulnerabilities in OBD-II dongles and conduct real experiments to prove the existence of these vulnerabilities.
@@ -56,7 +56,7 @@ These attacks can cause very severe consequence, such as leakage of information 
 1. The analysis need a real car, which is expensive to find.
 2. Without enough summary on some total pattern behind these devices
 
-# (2020 NDSS)Automated Cross-Platform Reverse Engineering of CAN Bus Commands From Mobile Apps
+# [(2020 NDSS)Automated Cross-Platform Reverse Engineering of CAN Bus Commands From Mobile Apps](https://web.cse.ohio-state.edu/~lin.3021/file/NDSS20.pdf)
 
 ## 1 Solved Problem
 In this paper, the author proposed a new method to perform reverse engineering on CAN bus messages. Compared to previous methods, the new method doesn't need a real car and human intervene, which lead to low cost and high efficiency.
@@ -68,7 +68,7 @@ Recent years, with the evolution of Iot and its application in automobiles, a lo
 1. The idea to analyze the bus commands generation process to get the syntactic and semantic of the CAN messages.
 2. Using backward slicing to get the semantic.
 
-# (2020 MobiCom)Renovating Road Signs for Infrastructure-to-Vehicle Networking
+# [(2020 MobiCom)Renovating Road Signs for Infrastructure-to-Vehicle Networking](https://dl.acm.org/doi/pdf/10.1145/3372224.3380883)
 
 ## 1 Solved Problem
 Current researches on perception of automobiles mostly concentrate on the vehicle side, such as more powerful sensors and more effective algorithms. However, some dynamic conditions on the road may be difficult for on-vehicle sensors to detect. So there is a requirement to deploy infrastructures along the road. However, most of the road side infrastructures are very expensive to deploy. In this paper, the author proposed a novel method that use the traffic signs to convey dynamic information about the road but keep their origin functions.
