@@ -65,4 +65,14 @@ In this paper, the author proposed a new method to perform reverse engineering o
 Recent years, with the evolution of Iot and its application in automobiles, a lot of mobile apps have be generated to provide various functions about the car, such as remote diagnosis and operation. However, such apps have to use CAN messages to communicate with the vehicles too, either by itself or its companion dongles. This provides us a new way to revert engineering the CAN messages by analyzing the logic that they generate a message.
 
 ## 3 Highlights Worth Learning
+1. The idea to analyze the bus commands generation process to get the syntactic and semantic of the CAN messages.
+2. Using backward slicing to get the semantic.
+
+# (2020 MobiCom)Renovating Road Signs for Infrastructure-to-Vehicle Networking
+
+## 1 Solved Problem
+Current researches on perception of automobiles mostly concentrate on the vehicle side, such as more powerful sensors and more effective algorithms. However, some dynamic conditions on the road may be difficult for on-vehicle sensors to detect. So there is a requirement to deploy infrastructures along the road. However, most of the road side infrastructures are very expensive to deploy. In this paper, the author proposed a novel method that use the traffic signs to convey dynamic information about the road but keep their origin functions.
+
+## 2 Main Idea
+
 
