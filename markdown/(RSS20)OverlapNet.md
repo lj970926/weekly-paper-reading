@@ -29,6 +29,13 @@ The OverlapNet consists of two legs sharing weights and two heads that use the s
 
 ![leg](../images/wk7_leg.png)
 
+2. Delta Head: the delta head is used to estimate the overlap using the feature maps generated in the legs. The main component in the delta head is the delta layer which compute the absolute difference between any two pixels in the two images. To perform the task, it first expand the two feature maps in different dimension. The subtraction of the two expanded matrix can represent all the difference between two images. 
+
+![delta layer](../images/wk7_delta.png)
+
+3. Correction Head: the correction head is mainly used to estimate the 
+
+
 # (2016 IROS)Fast Range Image-Based Segmentation of Sparse 3D Laser Scans for Online Operation
 
 ## 1 Solved Problem
