@@ -33,8 +33,13 @@ The OverlapNet consists of two legs sharing weights and two heads that use the s
 
 ![delta layer](../images/wk7_delta.png)
 
-3. Correction Head: the correction head is mainly used to estimate the 
+3. Correction Head: the correction head is mainly used to estimate the yaw angle. In this layer one feature map is expanded as twice in width and the other slide over the expanded map to obtain the raw angle.
 
+## 4 Strength
+
+1. The idea to use convolution neural network to predict the overlap and raw angle.
+2. The design of its loss function.
+3. 
 
 # (2016 IROS)Fast Range Image-Based Segmentation of Sparse 3D Laser Scans for Online Operation
 
@@ -53,3 +58,20 @@ The divide the full laser image to different objects the author used a BFS algor
 
 1. The idea to use the angle $\beta$ as the measurement of segmentation.
 2. Use a 2D image rather than the original point clout to accelerate the computation.
+
+# (2018 RSS)Efficient Surfel-Based SLAM using 3D Laser Range Data in Urban Environments
+
+## 1 Solved Problem
+In this paper, the author propose a surfel-based mapping algorithm that construct the dense map compared to traditional feature-based method in LiDAR SLAM. Furthermore, the author also devised a novel loop closure detection algorithm that can detect loop closing even the overlap is small between the scan and the rendered view from the model.
+
+## 2 Main Idea
+
+![surfel](../images/wk7_surfel.png)
+
+The pipeline of the algorithm is shown in picture above. In the preprocessing module, the raw point cloud is transformed to a vertex map and its corresponding normal map. In the up side of the picture, the two maps are used to calculate the transformation $T_{WC}$ and then update the surfel model. In the down side of the picture, it is used to perform loop closure detection.  
+The surfel representation plays a central role in the algorithm. In a surfel map, each surfel is represented by a position, a normal and a radius. All of the surfels consists of an unordered set.
+
+## 3 Highlights Worth Learning
+
+1. The idea to transfer dense mapping in image-based SLAM to the LiDAR SLAM region.
+2. Use vertex map to reduce computation cost.
