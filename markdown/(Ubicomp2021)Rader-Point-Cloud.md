@@ -31,9 +31,12 @@ To obtain this goal, the other utilize the fact that different  antenna pairs in
 
 ### 3.4 Target Detection and Focusing
 
-the use of mmWave radar can let the movement of the car to be constant speed, but it also induce some troubles such as the specular reflection. 
+The use of mmWave radar can let the movement of the car to be constant speed, but it also induce some troubles such as the specular reflection. 
+To overcome this question, the author proposed a target-based method that divide the images to different target and construct the target individually to get the final image.
 
+### 3.5 3D Point Cloud Generation
 
+Traditional SAR can only generate 2D image. But the height information is always playing an important role in the application of autonomous driving.  
+To solve this problem, the author utilize the observation that points in the same 2D position with a different height can be distinguished using the difference of their phases. After calculating the height information, we can finally fuse a 3D point cloud.
 
-# SAR Imaging of Moving Targets
 
