@@ -4,7 +4,23 @@
 Autonomous driving car relies heavily on the ability to percept the environment. However, current technologies used in AVs widely, such as camera and LiDAR, are vulnerable to weather condition. The Rader sensor doesn't has such limitation, but it can only get 2D perception in previous study, In this paper, the author proposed MILLIPOINT, which uses synthetic aperture radar to to construct 3D point clouds.
 
 ## 2 Challenge
-Despite the all-weather operations of Radar, there are several factors that constrain the application of Vehicle Radars.
+The SAR technology appeared in the 1990s and has gotten huge success in airline and ship.  Despite the all-weather operations of Radar, there are several factors that constrain the application of Vehicle Radars.
+* Aperture motion error: Tradition synthetic aperture radar require the Radar to move in a constant speed, which is impossible in the scene of roads.
+* Specular reflection: The wavelength of mmWave is larger than the roughness of the surface, so the specular reflection is prone to happen.
+* Height information: the objects' height are crucial in modern autonomous vehicles. However, the scatter points with the same cross-range and range values are in the same position in the final radar image.
+
+## 3 Main Idea
+### 3.1 Synthetic Aperture Radar
+With the basic Radar theory, the resolution of Radar is proportional to the length of its antenna. So SAR is proposed to be a method that generates a virtual antenna using the movement of the Radar set. In a transmission cycle the radar scatter a chirp and move in a constant speed when waiting for the reception. After some signal processing steps, we can final get a Radar image in a much higher resolution. The picture below shows the basic process of SAR
+
+![SAR](../images/wk8_sar.PNG)
+
+### 3.2 MILLPOINT Overview
+
+![overview](../images/wk8_overview.PNG)
+
+The author proposed MILLPOINT that extends the SAR to provide 3D points cloud for autonomous vehicles. To achieve this goal, it has three main components, as the picture shown above.
+* Self Cross-Range Tracking. 
 
 # SAR Imaging of Moving Targets
 
