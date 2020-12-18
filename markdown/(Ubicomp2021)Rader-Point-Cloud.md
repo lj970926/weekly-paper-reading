@@ -11,7 +11,7 @@ The SAR technology appeared in the 1990s and has gotten huge success in airline 
 
 ## 3 Main Idea
 ### 3.1 Synthetic Aperture Radar
-With the basic Radar theory, the resolution of Radar is proportional to the length of its antenna. So SAR is proposed to be a method that generates a virtual antenna using the movement of the Radar set. In a transmission cycle the radar scatter a chirp and move in a constant speed when waiting for the reception. After some signal processing steps, we can final get a Radar image in a much higher resolution. The picture below shows the basic process of SAR
+With the basic Radar theory, the resolution of Radar is proportional to the length of its antenna. So SAR is proposed to be a method that generates a virtual antenna using the movement of the Radar set. In a transmission cycle the radar scatter a chirp and move in a constant speed when waiting for the reception. After some signal processing steps, we can final get a Radar image in a much higher resolution. The picture below shows the basic process of SAR.
 
 ![SAR](../images/wk8_sar.PNG)
 
@@ -20,7 +20,8 @@ With the basic Radar theory, the resolution of Radar is proportional to the leng
 ![overview](../images/wk8_overview.PNG)
 
 The author proposed MILLPOINT that extends the SAR to provide 3D points cloud for autonomous vehicles. To achieve this goal, it has three main components, as the picture shown above.
-* Self Cross-Range Tracking. 
+* Self Cross-Range Tracking. Because MILLPOINT takes the sole baseband samples as its input. To utilize SAR, we must know the position and speed of the Radar.
+*  
 
 # SAR Imaging of Moving Targets
 
