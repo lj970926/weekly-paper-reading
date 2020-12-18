@@ -39,4 +39,14 @@ To overcome this question, the author proposed a target-based method that divide
 Traditional SAR can only generate 2D image. But the height information is always playing an important role in the application of autonomous driving.  
 To solve this problem, the author utilize the observation that points in the same 2D position with a different height can be distinguished using the difference of their phases. After calculating the height information, we can finally fuse a 3D point cloud.
 
+## 4 Strength
+
+1. The singal processing steps and the thought behind them is worth-learning
+2. Using 2D Radar to generate 3D point cloud
+3. The Radar sensor is robust to some bad weather condition.
+
+## 5 Weakness
+
+1. Don't do experiments on the real vehicles
+
 
