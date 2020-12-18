@@ -21,7 +21,19 @@ With the basic Radar theory, the resolution of Radar is proportional to the leng
 
 The author proposed MILLPOINT that extends the SAR to provide 3D points cloud for autonomous vehicles. To achieve this goal, it has three main components, as the picture shown above.
 * Self Cross-Range Tracking. Because MILLPOINT takes the sole baseband samples as its input. To utilize SAR, we must know the position and speed of the Radar.
-*  
+* Target Detection And Focusing. MILLPOINT uses both the origin signal and the speed extimation to get the 2D image of the environment. In this step it must consider the specular reflection effect.
+* 3D point generation. In this step, MILLPOINT uses the height extimation drived by the phase difference to construct the final 3D points cloud.
+
+### 3.3 Self Cross-Range Tracking
+
+The SAR need to obtain the distance that the vehicle moves between two consecutive pulses. However, other sensors, such as GPS, can't get a mm-level accuracy, which is required by the mmWave Radar. So, In this paper, the author tried to obtain the cross-range information by the Radar itself.  
+To obtain this goal, the other utilize the fact that different  antenna pairs in different times may get the same reception signal but with a delay that relates to the speed of the car directly. This is because the environment is static when compared with the speed of the car. So the author uses cross-correlation between different antennas to estimate the speed of the car.
+
+### 3.4 Target Detection and Focusing
+
+the use of mmWave radar can let the movement of the car to be constant speed, but it also induce some troubles such as the specular reflection. 
+
+
 
 # SAR Imaging of Moving Targets
 
