@@ -49,4 +49,10 @@ To solve this problem, the author utilize the observation that points in the sam
 
 1. Don't do experiments on the real vehicles
 
+# (2018 SP)Crowd-GPS-Sec: Leveraging Crowdsourcing to Detect and Localize GPS Spoofing Attacks
+
+## 1 Solved Problem
+In this paper, the author proposed a novel algorithm to detect and localize the GPS spoofing attack which is severe to airborne and UAVs. Compared other methods devised before, this algorithm doesn't require to modify the GPS satellite and receiver.
+
+## 2 Main Idea
 
