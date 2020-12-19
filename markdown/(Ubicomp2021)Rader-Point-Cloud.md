@@ -1,4 +1,4 @@
-# (2021 Ubicomp)3D Point Cloud Generation with Millimeter-Wave Radar
+# [(2021 Ubicomp)3D Point Cloud Generation with Millimeter-Wave Radar](http://xyzhang.ucsd.edu/papers/KQian_UbiComp21_RadarPointCloud.pdf)
 
 ## 1 Summary
 Autonomous driving car relies heavily on the ability to percept the environment. However, current technologies used in AVs widely, such as camera and LiDAR, are vulnerable to weather condition. The Rader sensor doesn't has such limitation, but it can only get 2D perception in previous study, In this paper, the author proposed MILLIPOINT, which uses synthetic aperture radar to to construct 3D point clouds.
@@ -49,7 +49,7 @@ To solve this problem, the author utilize the observation that points in the sam
 
 1. Don't do experiments on the real vehicles
 
-# (2018 SP)Crowd-GPS-Sec: Leveraging Crowdsourcing to Detect and Localize GPS Spoofing Attacks
+# [(2018 SP)Crowd-GPS-Sec: Leveraging Crowdsourcing to Detect and Localize GPS Spoofing Attacks](https://pulverturm-zofingen.ch/assets/downloads/pdf-und-powerpoint/GPS%20Schutz.pdf)
 
 ## 1 Solved Problem
 In this paper, the author proposed a novel algorithm to detect and localize the GPS spoofing attack which is severe to airborne and UAVs. Compared other methods devised before, this algorithm doesn't require to modify the GPS satellite and receiver.
@@ -70,7 +70,7 @@ As the picture above, the Crowd-GPS-Sec has three main components.
 2. Using OpenSky network to obtain information
 3. The thought to enhance current GPS system without any modification to them.
 
-# (2018 ECCV)3D Bounding Boxes for Road Vehicles: A One-Stage, Localization Prioritized Approach using Single Monocular Images.
+# [(2018 ECCV)3D Bounding Boxes for Road Vehicles: A One-Stage, Localization Prioritized Approach using Single Monocular Images.](http://openaccess.thecvf.com/content_ECCVW_2018/papers/11133/Gupta_3D_Bounding_Boxes_for_Road_Vehicles_A_One-Stage_Localization_Prioritized_ECCVW_2018_paper.pdf)
 
 ## 1 Solved Problem
 In this paper, the author proposed a 3D bounding-box algorithm that generate a bounding box for each object using a monocular image merely. To achieve this goal, it must generate accuracy height estimation using monocular images.
