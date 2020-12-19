@@ -56,3 +56,19 @@ In this paper, the author proposed a novel algorithm to detect and localize the 
 
 ## 2 Main Idea
 
+The Crowd-GPS-Sec is based on the crowdsourcing to detect and localize the spoofing attack.
+
+![crowd](../images/wk8_crowd.PNG)
+
+As the picture above, the Crowd-GPS-Sec has three main components.
+1. MLAT. The MLAT module estimate the location of the aircraft using the time difference of arrival of position advertisements between different sensors in OpenSky network.
+2. Spoofing Detection. To detect the existence of GPS spoofing, the author mainly compare the difference between the position drived by the GPS signal and the crowdsourcing network. Simultaneously, the author also considered the situation where two aircraft report the same location.
+3. Spoofing detection. To determine the position of the spoofer, the author compare the received position in advertisements and the true position estimated by the MLAT. 
+
+## 3 Highlights Worh Learning
+1. The use of multilateration to drive the true position of aircraft.
+2. Using OpenSky network to obtain information
+3. The thought to enhance current GPS system without any modification to them.
+
+# 
+
