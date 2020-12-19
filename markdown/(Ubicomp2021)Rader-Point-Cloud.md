@@ -70,5 +70,16 @@ As the picture above, the Crowd-GPS-Sec has three main components.
 2. Using OpenSky network to obtain information
 3. The thought to enhance current GPS system without any modification to them.
 
-# 
+# (2018 ECCV)3D Bounding Boxes for Road Vehicles: A One-Stage, Localization Prioritized Approach using Single Monocular Images.
 
+## 1 Solved Problem
+In this paper, the author proposed a 3D bounding-box algorithm that generate a bounding box for each object using a monocular image merely. To achieve this goal, it must generate accuracy height estimation using monocular images.
+
+## 2 Main Idea
+
+Compared to prior researches, the author innovate them in a few aspects. At first, the author regraded the center of the bottom face(CBF) as the key point and predict it before all the other prediction. Then it uses Inverse Perspective Mapping on the center of the bottom edge of the 2D bounding box to find the corresponding location in the world coordinates. Finally, the author uses a look-up table method to reproject the center to the 3D world.
+
+## 3 Highlights Worth Learning
+
+1. Use monocular image to estimate height information.
+2. Te use of IPM.
