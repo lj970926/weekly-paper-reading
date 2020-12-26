@@ -82,7 +82,23 @@ In this paper, the authors use four different machine learning classifiers, KNN,
 
 After some signal processing and feature extraction procedure, the author evaluate the possibility of identification by changing the amount of data the classifier can get.
 
-## 3 Highlights of learning
+## 3 Highlights Worth Learning
 1. Use CAN bus messages and machine learning to fingerprint drivers.
 2. Find sense in the opaque between users and manufactures.
 
+# (2012 CVPR) Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite
+
+## 1 Solved Problem
+
+In this year, visual recognition systems are rarely deployed in robotic applications, one important reason for this is the lack of benchmark standard. In this paper, the author proposed a new dataset for tasks of stereo, optical flow, visual odometry, SLAM and 3D object detection with benchmarks around each task.
+
+## 2 Main Idea
+
+Compared to previous in-door dataset, the authors capture data in the real scenarios with an autonomous driving platform. 
+
+![setup](../images/wk9_car.png)
+
+Specifically, the authors drive a car in a mid-size city and capture the measurement from sensors such as camera and LiDAR. The car used is equipped with two high resolution stereo camera system, a Velodyne HDL-64E laser scanner and a state-of-art OXTS RT 3003 localization system. To use these data as benchmark, the author also provide ground truth to each task.
+
+## 3 Highlights Worth Learning
+1. Propose a widely accepted benchmark in autonomous driving algorithms.
