@@ -67,3 +67,22 @@ To identify the relation as much as possible, the author compute the Pearson cor
 1. Can't get semantics information without prior knowledge.
 2. The organization of this paper is quite confused.
 
+# (2016 PoPETs) Automobile driver fingerprinting
+
+## 1 Solved Problem
+Today's autonomous vehicles leverage powerful sensors to optimize efficiency and safety. However, it also increases the danger of information leakage. So, In this paper, the authors attempt to identify individuals using the messages on CAN bus. With 15 participants on 2 typical driving scenarios, the author found that at least it can get almost 100% accuracy with a small number of candidates and the accuracy increase with the increment of available data.
+
+## 2 Main Idea
+In this paper, the authors use four different machine learning classifiers, KNN, Random Frost, SVM and Naive bayes. To obtain training data, the authors logged data from 16 sensors and 15 drivers in two types of road, as the picture depicted below:
+
+![tow roads](../images/wk9_roads.png)
+
+1. Three laps around a closed-course section.
+2. Around 50 miles of open road driving.
+
+After some signal processing and feature extraction procedure, the author evaluate the possibility of identification by changing the amount of data the classifier can get.
+
+## 3 Highlights of learning
+1. Use CAN bus messages and machine learning to fingerprint drivers.
+2. Find sense in the opaque between users and manufactures.
+
