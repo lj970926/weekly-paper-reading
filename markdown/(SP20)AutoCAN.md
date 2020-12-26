@@ -1,4 +1,4 @@
-# (2020 SP)I Know Where You Parked Last Summer: Automated Reverse Engineering and Privacy Analysis of Modern Cars
+# [(2020 SP)I Know Where You Parked Last Summer: Automated Reverse Engineering and Privacy Analysis of Modern Cars](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9152789)
 
 ## 1 Summary
 Recently, with the development of electronic technologies in modern cars, the perspective to seem a vehicle as a pure mechanical device is out-of-date. But these Electronic Control Units(ECUs) also collect diverse information from the vehicles and transmit them to the cloud. Because of the secret nature of the automotive industry, the format of its transmission protocol can't be found from the OEM or any other third-party organizations. In this paper, the author proposed a new tool, AutoCAN for privacy and security analysis that reveals what data cars collect by tapping into in-vehicle network. Furthermore, the algorithm proposed in independent to the specific physical and link layer protocols.
@@ -67,7 +67,7 @@ To identify the relation as much as possible, the author compute the Pearson cor
 1. Can't get semantics information without prior knowledge.
 2. The organization of this paper is quite confused.
 
-# (2016 PoPETs) Automobile driver fingerprinting
+# [(2016 PoPETs) Automobile driver fingerprinting](https://content.sciendo.com/downloadpdf/journals/popets/2016/1/article-p34.xml)
 
 ## 1 Solved Problem
 Today's autonomous vehicles leverage powerful sensors to optimize efficiency and safety. However, it also increases the danger of information leakage. So, In this paper, the authors attempt to identify individuals using the messages on CAN bus. With 15 participants on 2 typical driving scenarios, the author found that at least it can get almost 100% accuracy with a small number of candidates and the accuracy increase with the increment of available data.
@@ -86,7 +86,7 @@ After some signal processing and feature extraction procedure, the author evalua
 1. Use CAN bus messages and machine learning to fingerprint drivers.
 2. Find sense in the opaque between users and manufactures.
 
-# (2012 CVPR) Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite
+# [(2012 CVPR) Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite](http://www.webmail.cvlibs.net/publications/Geiger2012CVPR.pdf)
 
 ## 1 Solved Problem
 
