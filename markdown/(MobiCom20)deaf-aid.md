@@ -8,4 +8,8 @@ The are several works which attempt to build connection via covert channel such 
 Furthermore, because the covert channels are not designed originally toward communication, how to build robust communication on these deficient channels is another obstacle.
 
 ## 3 Main Idea
-### 3.1 Syetem design
+### 3.1 Resonance
+Previous works have proved that the ultrasound wave can lead the gyroscope to oscillate. Gyroscopes have different responses to ultrasound signal at different frequency. As the picture shown below:
+
+![resonance](../images/wk10_reso.PNG)
+
