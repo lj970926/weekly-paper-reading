@@ -55,4 +55,24 @@ The picture below shows the total procedure of the System. At the transmitter si
 ## 5 Weakness
 1. The bandwidth is quite small, which compromise the generality of the system.
 
+# (2020 USENIX)Light commands: laser-based audio injection attacks on voice-controllable systems
+
+## 1 Summary
+
+In this paper, the author proposed a novel attack that utilize the response that MEMS microphones make on laser beams to inject malicious signal to them. The authors find that attackers can inject arbitrary signals to the microphones with amplitude modulated laser beam which can lead to misbehavior of most of the commercial voice assistance.
+
+## 2 Main Idea
+
+![laser attack](../images/wk10_sysdes.PNG)
+
+The authors detect the following attack method.
+
+1. The authors use a oscilloscope to generate based band signal which is converted to laser signal by a laser driver that connect the laser diode and oscilloscope.
+2. The authors play a pre-recorded audio file. The wave form of the audio is translated to the signal by amplitude modulation.
+3. The laser beam arrive at the MEMS microphone and desirable induce fake output of it.
+
+## 3 Highlights Worth Learning
+
+1. With the using of laser beam as attack vector, the proposed method can much further attack distance compared to traditional voice signal based methods.
+2. The MEMS are vulnerable to a lots of physical phenomenon, which can be utilized to launch feasible attack.
 
