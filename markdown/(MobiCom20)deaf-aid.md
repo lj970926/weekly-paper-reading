@@ -1,4 +1,4 @@
-# (2020 MobiCom)Deaf-Aid: Mobile IoT Communication Exploiting Stealthy Speaker-to-Gyroscope Channel
+# [(2020 MobiCom)Deaf-Aid: Mobile IoT Communication Exploiting Stealthy Speaker-to-Gyroscope Channel](https://cse.buffalo.edu/~wenyaoxu/papers/conference/xu-mobicom2020c.pdf)
 
 ## 1 Summary
 The explosive development of IoT devices puts forward a higher demand for the communication technology. Because of the different purpose, there are a lot of existing electromagnetic wave based protocols, such as WiFi and Bluetooth. However, devices using one protocol can't communicate with devices with another protocol, which compromise the connectivity of smart devices. In this paper, the authors focus on the covert channel communication and proposed a communication system based on the resonance of the gyroscope triggered by ultrasound.
@@ -37,7 +37,7 @@ There are a lot of factors that min compromise the robustness of the transmissio
 * The motion in both the transmitter and the receiver.
 * The noise in the measurement process.
 
-To improve the effect of the system in real, complex world, the authors mutiply the output of the two axises and apply a mean filter to it, this can reduce the influence of sample rate offset and motion.
+To improve the effect of the system in real, complex world, the authors multiply the output of the two axises and apply a mean filter to it, this can reduce the influence of sample rate offset and motion.
 
 ![noise reduction](../images/wk10_multiply.PNG)
 
@@ -55,7 +55,7 @@ The picture below shows the total procedure of the System. At the transmitter si
 ## 5 Weakness
 1. The bandwidth is quite small, which compromise the generality of the system.
 
-# (2020 USENIX)Light commands: laser-based audio injection attacks on voice-controllable systems
+# [(2020 USENIX)Light commands: laser-based audio injection attacks on voice-controllable systems](https://www.usenix.org/system/files/sec20-sugawara.pdf)
 
 ## 1 Summary
 
@@ -75,4 +75,25 @@ The authors detect the following attack method.
 
 1. With the using of laser beam as attack vector, the proposed method can much further attack distance compared to traditional voice signal based methods.
 2. The MEMS are vulnerable to a lots of physical phenomenon, which can be utilized to launch feasible attack.
+
+# [(2018 AsiaCCS)Sensor CON-Fusion: Defeating Kalman Filter in Signal Injection Attack](https://dl.acm.org/doi/pdf/10.1145/3196494.3196506)
+
+## 1 Summary
+
+Sensor-fusion algorithms has been used widely to improve the robustness of the sensor measurement by combination outputs from a couple of different sensors. However, the sensor-fusion is not designed to increase the security of the sensor initially. So, in this paper, the author investigate the security of sensor fusion algorithm under multiple sensor attacks simultaneously.
+
+## 2 Main Idea
+
+The authors choose the attitude-heading reference systems(AHES) as the target. This system uses kalman filter to fuse outputs from accelerometer, gyroscope and magnetometer. The author categorize the access ability of attackers to three level.
+* Control: The attacker can let the sensor to generate desirable signal.
+* Disruptive: The attacker can corrupt the input of the sensor.
+* Uncontrollable: The attacker can't influence the sensor.
+
+Because there are three levels and three sensors, the authors investigate all of the 27 scenarios using generated data both in stationary and non-stationary condition.
+
+![sensor fusion result](../images/wk10_res.png)
+
+## 3 Highlights Worth Learning
+
+1. Consider the scenario where multiple sensor attacks happens.
 
