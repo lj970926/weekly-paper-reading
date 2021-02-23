@@ -13,4 +13,9 @@ The authors first construct a taxonomy about different attacks on localization a
 ![taxonomy](../images/wk11_taxonomy.png)
 
 After investigating current attack methods the authors conduct their own route spoofing attack and prove them to be effective to the most popular navigation applications.  
-The basic Idea in the attack is trying to change the parameters of the route planning functions(i.e. the staring, destination and waypoint positions). To achieve this 
+The basic Idea in the attack is trying to change the parameters of the route planning functions(i.e. the staring, destination and waypoint positions). To achieve this goal, the author use the workflow below:
+
+![workflow](../images/wk11_workflow.png)
+
+A rough description is to first disassemble the code of the navigation and inject malicious code to communicate to a malicious server after finding out the logic of the code.  
+The authors conduct experiments on three popular navigation apps and find all of them affected significantly by the attack above. The author also prove that all of the apps that has a route planning functions may be vulnerable to the attack too. 
