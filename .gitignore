@@ -1,4 +1,4 @@
 .vscode/
-*/org/*/*.tex
-*/org/*/*.pdf
-ltximg
+*/week*/*.tex
+*/week*/*.pdf
+ltximg/

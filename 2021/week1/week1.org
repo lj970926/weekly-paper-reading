@@ -12,16 +12,16 @@
     where $F = n \cdot F_s + \varepsilon (-0.5 \cdot F_s < \varepsilon < 0.5 \cdot F_s)$ is the frequency of digital signal after alias.
     From the formulation above we can find out that if the sampling rate $F_s$ increase with a small amount $\delta F_s$ , the change in the frequency of the digital signal is n times more than it. So even little offset in sampling rate can cause significant affect.
     we can also manipulate the amplitude and phase of the digital signal by change the amplitude and frequency of acoustic signal respectively as the picture show below.
-    [[../images/wk1_amp_adj.png]]
-    [[../images/wk1_phase_pace.png]]
+    [[./images/wk1_amp_adj.png]]
+    [[./images/wk1_phase_pace.png]]
 *** Attack Methods.
     Based on the analysis on the digitization process, the authors propose two kinds of attacks named side-swing attack and switching attack respectively. Because the pattern of the oscillation is a sinusoid signal, the accumulative offset induced by it is 0. So the basic idea of these two attack is trying to keep the digital in one direction and decrease it in the opposite orientation.
     In side-swing attack, the authors modulate the analog signal with two amplitude. When the digital signal is in target direction, the higher amplitude is used and when in inverse direction the other is used. The picture below show this process.
-    [[../images/wk1_side_swing.png]]
+    [[./images/wk1_side_swing.png]]
 *** Evaluation
     To evaluate the effect of the embedded inertial sensor spoofing attack, The author conduct experiments on 25 different sensors under close-loop and open-loop systems. The result of the experiment can be shown in the two tables below.
-    [[../images/wk1_table1.png]]
-    [[../images/wk1_table2.png]]
+    [[./images/wk1_table1.png]]
+    [[./images/wk1_table2.png]]
     With these experiments, the author find that 17 of the 25 inertial sensors can be implicitly controlled by the resonant attack.
 ** Strength
    1. Consider the effect of the sampling process.
@@ -36,9 +36,27 @@
    - In the second part, the authors devise a novel route spoofing attack by injecting malicious code to modify the parameter of the route planning function in navigation apps.
 ** Main Idea
    The authors first construct a taxonomy about differentattacks on localization and navigation system. The maincomponents in these two systems are GPS and HD map. So,the authors classify different attacks base on their targetcomponent. For each sort of attack, the authors also discuss the countermeasures toward it.
-   [[../images/wk11_taxonomy.png]]
+   [[./images/wk11_taxonomy.png]]
    After investigating current attack methods the authors conduct their own route spoofing attack and prove them to be effective to the most popular navigation applications.
    The basic idea in the attack is trying to change the parameters of the route planning functions(i.e. the staring, destination and waypoint positions). To achieve this goal, the author use the workflow below:
-   [[../images/wk11_workflow.png]]
+   [[./images/wk11_workflow.png]]
    A rough description is to first disassemble the code of the navigation and inject malicious code to communicate to a malicious server after finding out the logic of the code.  
-The authors conduct experiments on three popular navigation apps and find all of them affected significantly by the attack above. The author also prove that all of the apps that has a route planning functions may be vulnerable to the attack too. 
+   The authors conduct experiments on three popular navigation apps and find all of them affected significantly by the attack above. The author also prove that all of the apps that has a route planning functions may be vulnerable to the attack too. 
+** Highlights Worth Learning
+   1. Use reverse engineering to explore the scheme of source code.
+   2. The taxonomy about current attacks on localization modules in autonomous vehicles.
+* Cybersecurity in Autonomous Systems: Evaluating the performance of hardening ROS
+** Solved Problem
+   The ROS is designed to be composed with several nodes and a master that communicate by topic with each other. The communication model of ROS is a simple publisher and subscriber model. The simple model make the design and implementation of functionality easy, but it also makes the ROS system vulnerable to a variety of attacks because of the lack of authentication and encryption. In this paper, the author propose a altered ROS model that use cryto algorithms to protect the communication between different nodes.
+
+** Main Idea
+   The encryption framework proposed in this paper can be illustrated below.
+   [[./images/wk1_encrypt_ros.png]]
+   Instead of using the original node and topic that manage and publish sensor readings, the author create an intermediate node that subscribes the original topic, encrypt it and then publish data as another topic. After the encryption process, nodes without a valid key can't access the information conveyed.
+
+   In the feasibility study, the authors use the hello world demo provided by the ROS official. The author compare the performance in the same computer with and without encryption. The results show that the even a malicious node can receive the message from the topic, it can't understand it without a key. The performance lost of this encryption is relatively low.
+   [[./images/poc.png]]
+   Then, the authors use real string message to test the performance and find that the performance of this system decrease geometrically when the size of the messages increase.
+** Highlights Worth Learning
+   1. The elaborate illustration of ROS's workflow.
+   2. Clear experimental steps.
