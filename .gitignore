@@ -1,1 +1,4 @@
 .vscode/
+*/org/*/*.tex
+*/org/*/*.pdf
+ltximg
